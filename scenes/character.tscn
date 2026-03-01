@@ -405,6 +405,7 @@ light_mode = 1
 light_mode = 1
 
 [node name="Character" type="CharacterBody2D" unique_id=1207945146 groups=["character"]]
+z_index = 2
 texture_filter = 1
 texture_repeat = 1
 script = ExtResource("1_0dpix")

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cqqgvo7ma1aqh" path="res://scripts/levels.gd" id="1_ibiju"]
 [ext_resource type="Texture2D" uid="uid://dobkqij5v4x6n" path="res://assets/enemy/Skeleton enemy/Skeleton enemy.png" id="2_ibiju"]
 [ext_resource type="Texture2D" uid="uid://d1b4fmwcwq6q0" path="res://assets/2D_SL_Knight_v1.0/Idle.png" id="3_00hpi"]
-[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/Tileset_Cave.png" id="4_6g56m"]
+[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/tilemaps/Tileset_Cave.png" id="4_6g56m"]
 [ext_resource type="Texture2D" uid="uid://cahu00wf881pd" path="res://assets/stones/Screenshot 2026-02-28 111132.png" id="5_hbvtp"]
 [ext_resource type="Texture2D" uid="uid://d2hasf7xh7sb2" path="res://assets/Screenshot_2026-02-28_103944-removebg-preview.png" id="6_bxgxo"]
 [ext_resource type="Texture2D" uid="uid://xlkqefn7v623" path="res://assets/Screenshot_2026-02-28_105226-removebg-preview.png" id="7_8i0b8"]
@@ -1400,6 +1400,16 @@ theme_override_fonts/font = ExtResource("1_1jewu")
 theme_override_font_sizes/font_size = 60
 text = "Level 2"
 
+[node name="Level3" type="Button" parent="Levels" unique_id=1463292259]
+z_index = 1
+offset_left = 2146.0
+offset_top = 339.0
+offset_right = 2327.0
+offset_bottom = 408.0
+theme_override_fonts/font = ExtResource("1_1jewu")
+theme_override_font_sizes/font_size = 60
+text = "Level 3"
+
 [node name="Right" type="TextureButton" parent="." unique_id=1147082864]
 texture_filter = 1
 texture_repeat = 1
@@ -1421,7 +1431,6 @@ texture = SubResource("GradientTexture2D_0rm5t")
 color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=197666095]
-visible = false
 position = Vector2(1029.0001, 483)
 scale = Vector2(5.85035, -5.3480196)
 color = Color(0.93199867, 0.84104884, 0.5654008, 1)
@@ -1492,5 +1501,7 @@ texture_hover = ExtResource("23_1cmd0")
 [connection signal="pressed" from="Levels/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="mouse_entered" from="Levels/Level2" to="." method="_on_level_2_mouse_entered"]
 [connection signal="pressed" from="Levels/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="mouse_entered" from="Levels/Level3" to="." method="_on_level_3_mouse_entered"]
+[connection signal="pressed" from="Levels/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

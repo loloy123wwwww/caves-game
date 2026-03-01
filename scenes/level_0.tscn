@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bbgsrtc5wvpjj" path="res://scenes/character.tscn" id="1_rerym"]
 [ext_resource type="FontFile" uid="uid://chskrdwnk0fog" path="res://assets/fonts/Anton,Press_Start_2P/Press_Start_2P/PressStart2P-Regular.ttf" id="2_lbrgs"]
 [ext_resource type="PackedScene" uid="uid://dqqx8fa8xu4dh" path="res://scenes/enemy.tscn" id="2_uijja"]
-[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/Tileset_Cave.png" id="3_5nv5w"]
+[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/tilemaps/Tileset_Cave.png" id="3_5nv5w"]
 [ext_resource type="Script" uid="uid://cfw0qaiqsjk3v" path="res://scripts/dialogue_box.gd" id="8_44yx7"]
 [ext_resource type="Texture2D" uid="uid://d2hasf7xh7sb2" path="res://assets/Screenshot_2026-02-28_103944-removebg-preview.png" id="8_ll25s"]
 [ext_resource type="PackedScene" uid="uid://cvxejs2dkxp65" path="res://scenes/portal.tscn" id="8_qjcqe"]

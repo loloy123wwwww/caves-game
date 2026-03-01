@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dobkqij5v4x6n" path="res://assets/enemy/Skeleton enemy/Skeleton enemy.png" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://bg3yiuqdy23pm" path="res://assets/fonts/DungeonFont.ttf" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://d1b4fmwcwq6q0" path="res://assets/2D_SL_Knight_v1.0/Idle.png" id="2_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/Tileset_Cave.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://mbp20lkfgp3u" path="res://assets/tilemaps/Tileset_Cave.png" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bebllabchtvub" path="res://assets/Lava/Screenshot_2026-02-28_121525-removebg-preview.png" id="5_7b55j"]
 [ext_resource type="Texture2D" uid="uid://d2hasf7xh7sb2" path="res://assets/Screenshot_2026-02-28_103944-removebg-preview.png" id="5_8ln24"]
 [ext_resource type="Texture2D" uid="uid://cahu00wf881pd" path="res://assets/stones/Screenshot 2026-02-28 111132.png" id="5_tbmy8"]

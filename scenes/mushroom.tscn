@@ -18,13 +18,13 @@ fill_to = Vector2(0.49447513, 0)
 
 [node name="Screenshot20260228130906RemovebgPreview3" type="Sprite2D" parent="." unique_id=1497339686]
 z_index = 1
-position = Vector2(369, 549)
+position = Vector2(-2.7422256, 1.2578354)
 scale = Vector2(0.037973158, 0.045265798)
 texture = ExtResource("1_b0s10")
 
 [node name="Screenshot20260228130906RemovebgPreview5" type="Sprite2D" parent="." unique_id=806134807]
 z_index = -1
-position = Vector2(360, 555)
+position = Vector2(-11.742226, 7.2578354)
 scale = Vector2(0.021986587, 0.019626876)
 texture = ExtResource("1_b0s10")
 
@@ -32,11 +32,11 @@ texture = ExtResource("1_b0s10")
 script = ExtResource("2_0bdi0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1329663535]
-position = Vector2(365, 550)
+position = Vector2(-6.7422256, 2.2578354)
 shape = SubResource("RectangleShape2D_0bdi0")
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=2141798365]
-position = Vector2(367, 548.99994)
+position = Vector2(-4.7422256, 1.2577744)
 scale = Vector2(2.3205554, 2.3205554)
 color = Color(0.30588236, 0.30588236, 0.30588236, 0.7137255)
 texture = SubResource("GradientTexture2D_qxrkd")

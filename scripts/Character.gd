@@ -51,11 +51,18 @@ func play_click_and_fade(scene_path):
         get_tree().change_scene_to_file(scene_path)
     else:
         get_tree().quit()
+func turn_audio_off():
+    $Audio/bgAudio.stream.loop = false
+    $Audio/bgAudio.stop()
+func turn_audio_on():
+    $Audio/bgAudio.stream.loop = true
+    $Audio/bgAudio.play()
 
 func take_damage(amount: int):
     if is_dead:
         return
     is_hit = true
+    is_attacking = false  # <-- add this
     player_health = clamp(player_health - amount, 0, max_health)
     progress_bar.change_health(player_health)
     anim_sprite.play("hit")
@@ -92,7 +99,7 @@ func _physics_process(delta: float) -> void:
             var cell_coords = collider.local_to_map(local_pos)
             var tile_data = collider.get_cell_tile_data(cell_coords)
             if tile_data and tile_data.get_custom_data("deadly") == true:
-                die()
+                take_damage(10)
                 break
     if is_dead:
         return
@@ -136,6 +143,11 @@ func _on_animated_sprite_2d_animation_finished() -> void:
         is_attacking = false
         anim_sprite.play("idle")
     if anim_sprite.animation.begins_with("hit"):
+        is_hit = false
+        anim_sprite.play("idle")
+    # Safety net: if somehow both flags are still set, clear them
+    if not anim_sprite.is_playing():
+        is_attacking = false
         is_hit = false
         anim_sprite.play("idle")
 

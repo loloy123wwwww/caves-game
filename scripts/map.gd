@@ -28,6 +28,8 @@ var triggered_third := false
 var triggered_fourth := false
 var triggered_fifth := false
 
+
+
 func _ready() -> void:
     first.body_entered.connect(_on_first_entered)
     second.body_entered.connect(_on_second_entered)
@@ -36,8 +38,12 @@ func _ready() -> void:
     fifth.body_entered.connect(_on_fifth_entered)
 
 func _on_first_entered(body):
+
+        
     if body.is_in_group("character") and not triggered_first:
         triggered_first = true
+      
+            
         if first_line_1 != "": dialogue.show_text(first_line_1)
         if first_line_2 != "": dialogue.show_text(first_line_2)
 

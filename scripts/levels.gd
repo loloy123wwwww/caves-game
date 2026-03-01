@@ -7,7 +7,7 @@ extends Control
 @onready var right_node = $Right_Node
 @onready var levels = $Levels
 @onready var label = $Cave_Label
-
+@onready var level3 = $Levels/Level3
 
 @onready var click_sound = $CanvasLayer/AudioStreamPlayer2D
 @onready var fade: ColorRect = $CanvasLayer/Fade
@@ -15,7 +15,7 @@ extends Control
 var center = 490
 var difference = 700
 var current_level = 0
-var max_level = 2
+var max_level = 3
 var is_animating = false
 var transitioning = false
 var fade_time := 0.5
@@ -24,6 +24,7 @@ func _ready() -> void:
     level0.position = Vector2(490, 339)
     level1.position = Vector2(center + difference, 339)
     level2.position = Vector2(center + difference * 2, 339)
+    level3.position = Vector2(center + difference * 3, 339)
     _update_arrows()
 
     fade.modulate.a = 0.0
@@ -130,3 +131,11 @@ func _on_back_pressed() -> void:
 
 func _on_back_mouse_entered() -> void:
     _play_click()
+
+
+func _on_level_3_mouse_entered() -> void:
+    _play_click()
+
+
+func _on_level_3_pressed() -> void:
+   _play_click_and_fade("res://scenes/level_3.tscn")
