@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://bjl745mai8aex" path="res://assets/konfety/konfeta3.png" id="32_nhai6"]
 [ext_resource type="Texture2D" uid="uid://b76khwp00t52k" path="res://assets/konfety/konfeta1.png" id="33_0vrl8"]
 [ext_resource type="Texture2D" uid="uid://cnupdmkenogmx" path="res://assets/konfety/konfeta2.png" id="34_1ke33"]
+[ext_resource type="Script" uid="uid://vbq40u2nd2nf" path="res://scripts/map.gd" id="35_os8re"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wa6ex"]
 light_mode = 1
@@ -291,10 +292,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ciptj"]
+size = Vector2(7.1979237, 8.410238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnlnj"]
+size = Vector2(94.75, 217.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhai6"]
+size = Vector2(20, 223)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vrl8"]
+size = Vector2(147, 299.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ke33"]
+size = Vector2(100, 283)
+
 [node name="Level3" type="Node2D" unique_id=1448817746]
 
 [node name="Character" parent="." unique_id=1207945146 instance=ExtResource("1_wae8j")]
-position = Vector2(1558, -724)
+position = Vector2(6, -25)
 
 [node name="Camera2D" type="Camera2D" parent="Character" unique_id=1308392222]
 zoom = Vector2(3, 3)
@@ -756,3 +772,44 @@ position = Vector2(2143, -716)
 sprite_frames = SubResource("SpriteFrames_be7ao")
 animation = &"konfeta"
 flip_h = true
+
+[node name="Map" type="Node2D" parent="." unique_id=585521591]
+script = ExtResource("35_os8re")
+second_line_1 = "Its going up"
+second_line_2 = "Maybe im near the end"
+third_line_1 = "Finally. I see light"
+fourth_line_1 = "Fresh air .... finally"
+fifth_line_1 = "My home!"
+metadata/_edit_lock_ = true
+
+[node name="First" type="Area2D" parent="Map" unique_id=1953540573]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/First" unique_id=807678685]
+position = Vector2(14.000006, -55.000004)
+rotation = -3.1415925
+scale = Vector2(23.553963, -46.547882)
+shape = SubResource("RectangleShape2D_ciptj")
+
+[node name="Second" type="Area2D" parent="Map" unique_id=1755115628]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Second" unique_id=1565037299]
+position = Vector2(305, -42)
+shape = SubResource("RectangleShape2D_jnlnj")
+
+[node name="Third" type="Area2D" parent="Map" unique_id=195010551]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Third" unique_id=1926687879]
+position = Vector2(1041, -403)
+shape = SubResource("RectangleShape2D_nhai6")
+
+[node name="Fourth" type="Area2D" parent="Map" unique_id=1718424550]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fourth" unique_id=733352623]
+position = Vector2(1393, -746.25)
+shape = SubResource("RectangleShape2D_0vrl8")
+
+[node name="Fifth" type="Area2D" parent="Map" unique_id=1336040761]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Fifth" unique_id=1979946127]
+position = Vector2(1870, -749)
+shape = SubResource("RectangleShape2D_1ke33")

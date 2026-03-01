@@ -40,7 +40,9 @@ func _enter_castle():
     
     $"../Victory/Konfeta1".visible = false
     $"../Victory/Konfeta2".visible = false
-    
-
-    GameState.complete_level(0)  
+    await get_tree().create_timer(2.0).timeout
+    GameState.complete_level(0) 
+    GameState.complete_level(1) 
+    GameState.complete_level(2) 
+    GameState.complete_level(3)  
     get_tree().change_scene_to_file("res://scenes/levels.tscn")
