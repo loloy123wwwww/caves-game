@@ -10,6 +10,7 @@ var coins = 0
 var is_hit = false
 var is_dead := false
 
+@onready var bird_audio = $Audio/Birds
 @onready var dialogue = $Camera2D/Dialogue
 @export var min_damage = 15
 @export var crit_damage = 30
@@ -38,7 +39,9 @@ func _ready() -> void:
     print("death_label text: ", death_label.text)
     $Audio/bgAudio.stream.loop = true
     $Audio/bgAudio.play()
-
+    
+    
+    bird_audio.stop()
 
 func play_click_and_fade(scene_path):
     click_sound.pitch_scale = 0.8
@@ -54,9 +57,18 @@ func play_click_and_fade(scene_path):
 func turn_audio_off():
     $Audio/bgAudio.stream.loop = false
     $Audio/bgAudio.stop()
+        
+
+
+ 
+    bird_audio.play()
+    
 func turn_audio_on():
     $Audio/bgAudio.stream.loop = true
     $Audio/bgAudio.play()
+
+    
+    bird_audio.stop()
 
 func take_damage(amount: int):
     if is_dead:

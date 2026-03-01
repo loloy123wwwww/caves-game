@@ -21,8 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://bbo3v0y7bja6p" path="res://scenes/torch.tscn" id="19_ty6mb"]
 [ext_resource type="AudioStream" uid="uid://cyq6pghdcqmi6" path="res://assets/sounds/UI Soundpack/UI Soundpack/WAV/Minimalist2.wav" id="20_0rm5t"]
 [ext_resource type="Texture2D" uid="uid://ch5ahsspq3es3" path="res://assets/ui/back_button/Screenshot_2026-02-28_194453-removebg-preview.png" id="21_6uglv"]
+[ext_resource type="AudioStream" uid="uid://ca7son6v8ha6s" path="res://assets/sounds/699949__8bitmyketison__multimedia-sfx-error-02-aggressive-distorted.wav" id="21_73vgx"]
 [ext_resource type="Texture2D" uid="uid://gv0rpe327trq" path="res://assets/ui/back_button/Screenshot_2026-02-28_195836-removebg-preview.png" id="22_73vgx"]
 [ext_resource type="Texture2D" uid="uid://chtmr32prm60q" path="res://assets/ui/back_button/Screenshot_2026-02-28_194408-removebg-preview.png" id="23_1cmd0"]
+[ext_resource type="Texture2D" uid="uid://dlaalvm1j8qgw" path="res://assets/lock.png" id="25_1cmd0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ekxnf"]
 atlas = ExtResource("2_ibiju")
@@ -1380,6 +1382,12 @@ theme_override_fonts/font = ExtResource("1_1jewu")
 theme_override_font_sizes/font_size = 60
 text = "Level 0"
 
+[node name="Lock" type="Sprite2D" parent="Levels/Level0" unique_id=104805177]
+z_index = 2
+texture_filter = 1
+position = Vector2(85, 33)
+texture = ExtResource("25_1cmd0")
+
 [node name="Level1" type="Button" parent="Levels" unique_id=1591252417]
 z_index = 1
 offset_left = 1070.0
@@ -1389,6 +1397,12 @@ offset_bottom = 408.0
 theme_override_fonts/font = ExtResource("1_1jewu")
 theme_override_font_sizes/font_size = 60
 text = "Level 1"
+
+[node name="Lock" type="Sprite2D" parent="Levels/Level1" unique_id=1928738342]
+z_index = 2
+texture_filter = 1
+position = Vector2(82, 33)
+texture = ExtResource("25_1cmd0")
 
 [node name="Level2" type="Button" parent="Levels" unique_id=1772492918]
 z_index = 1
@@ -1400,6 +1414,12 @@ theme_override_fonts/font = ExtResource("1_1jewu")
 theme_override_font_sizes/font_size = 60
 text = "Level 2"
 
+[node name="Lock" type="Sprite2D" parent="Levels/Level2" unique_id=1291372661]
+z_index = 2
+texture_filter = 1
+position = Vector2(90, 33)
+texture = ExtResource("25_1cmd0")
+
 [node name="Level3" type="Button" parent="Levels" unique_id=1463292259]
 z_index = 1
 offset_left = 2146.0
@@ -1409,6 +1429,12 @@ offset_bottom = 408.0
 theme_override_fonts/font = ExtResource("1_1jewu")
 theme_override_font_sizes/font_size = 60
 text = "Level 3"
+
+[node name="Lock" type="Sprite2D" parent="Levels/Level3" unique_id=1409606957]
+z_index = 2
+texture_filter = 1
+position = Vector2(94, 33)
+texture = ExtResource("25_1cmd0")
 
 [node name="Right" type="TextureButton" parent="." unique_id=1147082864]
 texture_filter = 1
@@ -1476,6 +1502,10 @@ offset_bottom = -88.64909
 scale = Vector2(34.11475, 66.55386)
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="CanvasLayer" unique_id=1082254809]
+stream = ExtResource("21_73vgx")
+volume_db = 12.0
 
 [node name="Back" type="TextureButton" parent="." unique_id=894442128]
 modulate = Color(0.49158353, 0.49158317, 0.49158323, 1)

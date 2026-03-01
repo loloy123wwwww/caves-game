@@ -77,7 +77,7 @@ func fade_and_change_scene():
     var current_scene = get_tree().current_scene
     if current_scene == null:
         return
-
+    
     var tween = create_tween()
     tween.tween_property(fade, "modulate:a", 1.0, fade_time)
     await tween.finished
@@ -85,6 +85,11 @@ func fade_and_change_scene():
 
     var scene_path = current_scene.scene_file_path
     if scene_path == "res://scenes/level_0.tscn":
+        GameState.complete_level(0)
         get_tree().change_scene_to_file("res://scenes/level_1.tscn")
     elif scene_path == "res://scenes/level_1.tscn":
+        GameState.complete_level(1)
         get_tree().change_scene_to_file("res://scenes/level_2.tscn")
+    elif scene_path == "res://scenes/level_2.tscn":
+        GameState.complete_level(2)
+        get_tree().change_scene_to_file("res://scenes/level_3.tscn")

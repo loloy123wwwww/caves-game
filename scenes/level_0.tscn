@@ -262,7 +262,7 @@ offset_bottom = -111.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_lbrgs")
 theme_override_font_sizes/font_size = 7
-text = "Pick coins to survive"
+text = "Collect coins "
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="TileMapLayer" unique_id=42895367]
@@ -427,7 +427,7 @@ autoplay = "default"
 [node name="Map" type="Node2D" parent="." unique_id=1731136175]
 script = ExtResource("18_lbrgs")
 first_line_1 = "Where am I?"
-first_line_2 = "I need to get out"
+first_line_2 = "I need to escape"
 second_line_1 = "I should pick it up"
 second_line_2 = "Maybe its going to be needed"
 third_line_1 = "Carefull"

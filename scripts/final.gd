@@ -19,9 +19,11 @@ func _on_body_entered(body):
         if _unshaded_tilemap and unshaded_material:
             _unshaded_tilemap.material = unshaded_material
             body.turn_audio_off()
+ 
 
 func _on_body_exited(body):
     if body.is_in_group("character"):
         if _unshaded_tilemap:
             _unshaded_tilemap.material = _original_material
-            body.turn_audio_on()
+            body.turn_audio_on()           
+   

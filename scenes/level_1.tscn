@@ -191,9 +191,6 @@ texture_repeat = 1
 tile_map_data = PackedByteArray("AAAcAAYAAAAFAAAAAAAbAAYAAAAFAAAAAAAlAA4AAAAHAAAAAAAkAA4AAAAHAAAAAAAfABUAAAAHAAAAAAAgABUAAAAHAAAAAAAnABoAAAAHAAAAAAAmABoAAAAHAAAAAAANAAQAAAAGAAAAAAAOAAQAAAAGAAAAAAAPAAUAAAAGAAAAAAAQAAQAAAAGAAAAAAAnABwAAAAHAAAAAAAmAB0AAAAHAAAAAAAlAB8AAAAIAAEAAAAkACAAAAAIAAEAAAAjACAAAAAIAAEAAAAiACEAAAAIAAEAAAAhACEAAAAHAAEAAAAgACEAAAAHAAEAAAAfACEAAAAHAAEAAAAbACYAAAAHAAAAAAAcACgAAAAHAAAAAAAdACkAAAAHAAAAAADl/ycAAAAHAAAAAADm/ykAAAAHAAAAAADn/ykAAAAHAAAAAAD1/ysAAAAHAAEAAAD2/ysAAAAHAAEAAAD3/ysAAAAHAAEAAAD4/yoAAAAHAAAAAAD5/yoAAAAHAAAAAAD+/ycAAAAIAAAAAAD//ycAAAAIAAAAAADy/yAAAAAIAAEAAADz/yAAAAAIAAEAAADl/yIAAAAHAAAAAADm/yIAAAAHAAAAAABEACcAAAAHAAAAAABDACcAAAAHAAAAAABMACgAAAAHAAAAAABNACgAAAAHAAAAAABOACgAAAAHAAAAAABEACoAAAAHAAAAAABFACoAAAAIAAAAAABGACoAAAAHAAEAAABHACoAAAAHAAEAAABIACoAAAAHAAAAAABJACoAAAAIAAEAAABKACoAAAAIAAAAAABLACoAAAAIAAEAAABMACoAAAAIAAAAAABNACoAAAAHAAEAAABOACoAAAAIAAAAAABPACoAAAAIAAAAAABQACoAAAAHAAAAAABRACoAAAAHAAAAAABSACoAAAAIAAAAAAAtACYAAAAIAAEAAAAuACYAAAAIAAAAAAAvACcAAAAIAAAAAAAwACYAAAAIAAEAAAAmACEAAAAHAAEAAAAnACEAAAAHAAEAAAAoACEAAAAHAAAAAAApACEAAAAHAAAAAAAaACEAAAAHAAEAAAA6ACcAAAAHAAEAAAA7ACcAAAAHAAEAAAA8ACcAAAAHAAEAAAA3ACUAAAAHAAEAAAA0ACMAAAAHAAEAAABLACgAAAAHAAEAAABFACcAAAAHAAEAAAA=")
 tile_set = SubResource("TileSet_ipu61")
 
-[node name="Coin" parent="." unique_id=1952550475 instance=ExtResource("7_wi4c7")]
-position = Vector2(231, 614)
-
 [node name="Enemy2" parent="." unique_id=1883704225 instance=ExtResource("3_d2op2")]
 position = Vector2(142, 626)
 
@@ -216,7 +213,6 @@ position = Vector2(911, 598)
 position = Vector2(606, 529)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2002688824]
-visible = false
 color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
 [node name="Screenshot20260228105226RemovebgPreview" type="Sprite2D" parent="." unique_id=629712047]
@@ -312,10 +308,9 @@ texture = ExtResource("10_2aecg")
 
 [node name="Area2D" parent="." unique_id=903844828 instance=ExtResource("14_6dial")]
 position = Vector2(1399, 602)
-required_coins = 8
+required_coins = 6
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=908788470]
-visible = false
 
 [node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=1958151755]
 offset_left = -720.0
@@ -326,14 +321,11 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=895833099]
-visible = false
 script = ExtResource("10_1s4pk")
 first_line_1 = "Another cave?"
 second_line_1 = "Enemy!"
-second_line_2 = "Theres more of them?"
 third_line_1 = "Is this eatable?"
-fourth_line_1 = "I got to pick these coins"
-fourth_line_2 = "carefull, there are spikes!"
+fourth_line_1 = "I got to collect this"
 fifth_line_1 = "Another portal!?"
 fifth_line_2 = "I guess ill have to follow it"
 

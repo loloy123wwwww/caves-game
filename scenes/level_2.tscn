@@ -26,11 +26,11 @@ light_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_guvtl"]
 light_mode = 1
 
-[sub_resource type="Gradient" id="Gradient_k22d5"]
+[sub_resource type="Gradient" id="Gradient_bv48q"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g2hoc"]
-gradient = SubResource("Gradient_k22d5")
+gradient = SubResource("Gradient_bv48q")
 fill = 1
 fill_from = Vector2(0.49447513, 0.4723757)
 fill_to = Vector2(0.49447513, 0)
@@ -286,7 +286,6 @@ scale = Vector2(0.056613427, 0.052668154)
 texture = ExtResource("11_172wr")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1662280171]
-visible = false
 color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 
 [node name="Mushroom" parent="." unique_id=1025239873 instance=ExtResource("8_que50")]
@@ -294,7 +293,7 @@ position = Vector2(1780, 353)
 
 [node name="Area2D" parent="." unique_id=903844828 instance=ExtResource("9_hey2k")]
 position = Vector2(1840, 315)
-required_coins = 2
+required_coins = 6
 
 [node name="Coin" parent="." unique_id=588464781 instance=ExtResource("10_172wr")]
 position = Vector2(990, 156)
@@ -306,7 +305,6 @@ position = Vector2(1166, 248)
 position = Vector2(419, 23)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1187089067]
-visible = false
 
 [node name="Fade" type="ColorRect" parent="CanvasLayer" unique_id=348022020]
 offset_left = -720.0
@@ -362,14 +360,12 @@ texture = SubResource("GradientTexture2D_g2hoc")
 
 [node name="Map" type="Node2D" parent="." unique_id=1333228312]
 script = ExtResource("19_bv48q")
-first_line_1 = "Another cave?"
-second_line_1 = "Enemy!"
-second_line_2 = "Theres more of them?"
-third_line_1 = "Is this eatable?"
-fourth_line_1 = "I got to pick these coins"
-fourth_line_2 = "carefull, there are spikes!"
-fifth_line_1 = "Another portal!?"
-fifth_line_2 = "I guess ill have to follow it"
+first_line_1 = "This cave looks different"
+second_line_1 = "Carefull Lava!"
+third_line_1 = "Why is it going deeper?"
+fourth_line_1 = "Die enemies"
+fourth_line_2 = "Portal"
+metadata/_edit_lock_ = true
 
 [node name="First" type="Area2D" parent="Map" unique_id=1128293218]
 
